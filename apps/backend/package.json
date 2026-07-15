@@ -1,0 +1,24 @@
+{
+  "name": "@equation-orchestra/backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "medusa develop",
+    "build": "medusa build"
+  },
+  "dependencies": {
+    "@medusajs/medusa": "^2.0.0",
+    "@mercurjs/core": "workspace:*",
+    "@equation-orchestra/database": "workspace:*",
+    "@equation-orchestra/shared": "workspace:*",
+    "@equation-orchestra/auth": "workspace:*",
+    "@equation-orchestra/ai": "workspace:*",
+    "@equation-orchestra/notifications": "workspace:*",
+    "@equation-orchestra/search": "workspace:*",
+    "@equation-orchestra/storage": "workspace:*"
+  },
+  "devDependencies": {
+    "@medusajs/medusa-cli": "^2.0.0",
+    "typescript": "^5.0.0"
+  }
+}
