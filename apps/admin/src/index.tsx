@@ -1,17 +1,23 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-
-const App = () => {
-  return (
-    <div style={{ fontFamily: 'sans-serif', padding: '2rem' }}>
-      <h1>B2B Procurement Platform — Admin Dashboard</h1>
-      <p>Manage vendors, approve RFQs, and monitor purchase orders.</p>
-    </div>
-  );
-};
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
+import { AppProvider } from './context/AppContext';
+import App from './App';
+import './index.css';
 
 const container = document.getElementById('root');
 if (container) {
   const root = createRoot(container);
-  root.render(<App />);
+  root.render(
+    <React.StrictMode>
+      <ThemeProvider>
+        <AppProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </AppProvider>
+      </ThemeProvider>
+    </React.StrictMode>
+  );
 }
